@@ -1,0 +1,260 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin:0;
+}
+/*----------- Navbar --------------- */
+.navbar-nav .nav-link {
+  transition: all 0.3s ease;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #fff;
+  background-color: rgba(255, 193, 7, 0.1);
+  border-radius: 0.25rem;
+}
+
+
+.navbar-toggler {
+  border-color: #e9e8e5;
+}
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.25rem whitesmoke;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    margin-top: 0.5rem;
+  }
+
+  .navbar-nav {
+    background-color: #2C2C2C;
+    margin-top: 0.5rem;
+  }
+  .navbar-nav .nav-item {
+    border-top: 1px solid #f3f1ed;
+    }
+  .navbar-nav .nav-item:first-child {
+    border-top: none;
+  }
+}
+
+/*----------- Hero Section -----------*/
+.hero {
+  height: 90vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("images/hero-background.jpg") center center / cover no-repeat;
+  filter: brightness(0.6);
+  animation: zoomMoveCycle 30s ease-in-out infinite;
+  z-index: -1;
+}
+
+.hero-card {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 1.5rem;
+  max-width: 600px;
+  color: #fff;
+  padding: 3rem 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.85);
+  z-index: 1;
+}
+@media (max-width: 768px) {
+  .hero-card {
+    max-width: 90%; 
+    padding: 2rem 1.5rem; 
+     background-color: transparent;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-card {
+    max-width: 95%; 
+    padding: 1.5rem 1rem;
+     background-color: transparent;
+  }
+}
+@keyframes zoomMoveCycle {
+  0% {
+    transform: scale(1) translateX(0);
+  }
+  25% {
+    transform: scale(1.15) translateX(0);
+  }
+  50% {
+    transform: scale(1.15) translateX(30px);
+  }
+  75% {
+    transform: scale(1.15) translateX(-30px);
+  }
+  100% {
+    transform: scale(1) translateX(0);
+  }
+}
+
+
+/* ----------Gradient Animated Title---------- */
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(
+    90deg,
+    #fbfcf5,
+    #ffc107,
+    rgb(236, 234, 231),
+    #df0a0a,
+    #ece9c0
+  );
+  background-size: 300% 100%;
+  background-position: 0% 50%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientLinear 8s linear infinite;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+@keyframes gradientLinear {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+/* -----------Responsive Fonts----------- */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+}
+
+/*----------resturants section---------------*/
+
+.restaurants-section {
+  background: url('images/resturants.jpg') center/cover no-repeat fixed;
+  padding: 4rem 0;
+}
+
+.restaurants-section .card {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+
+}
+
+.restaurants-section .card-img-top {
+  height: 180px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.restaurants-section .row {
+  overflow: hidden;
+}
+.restaurant-card {
+  overflow: hidden; 
+}
+
+.restaurant-card .card-img-top {
+  transition: transform 0.4s ease;
+}
+
+.restaurant-card:hover .card-img-top {
+  transform: scale(1.1);
+}
+
+/* ---------- Menu Page ---------- */
+
+#menu .menu-thumb {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+#menu .card {
+  height: 100%;
+}
+#menu .col-lg-4,
+#menu .col-md-6,
+#menu .col-sm-12 {
+  display: flex;
+}
+
+#menu .card {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#menu .card .row {
+  flex: 1; 
+}
+
+#menu .card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.menu-thumb {
+  transition: transform 0.4s ease;
+}
+
+.menu-thumb:hover {
+  transform: scale(1.1);
+}
+/*---------------Order Section --------------*/
+.order-section {
+  background: url('images/pexels-imin-technology-276315592-12935041.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.order-form {
+  background-color: rgba(0,0,0,0.75);
+  backdrop-filter: blur(3px);
+}
+
+/* --------------------About Section-------------------*/
+
+.perspective-wrapper {
+  overflow: hidden;
+}
+
+.perspective-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform-origin: center center;
+  animation: zoomMoveCycle 20s ease-in-out infinite;
+}
+
+@keyframes zoomMoveCycle {
+  0% {
+    transform: scale(1) translateX(0);
+  }
+  25% {
+    transform: scale(1.15) translateX(0);
+  }
+  50% {
+    transform: scale(1.15) translateX(-30px);
+  }
+  75% {
+    transform: scale(1.15) translateX(30px);
+  }
+  100% {
+    transform: scale(1) translateX(0);
+  }
+}
+
+/*---------contact-------------*/
+.contact-section {
+  background-color: #222;
+}
